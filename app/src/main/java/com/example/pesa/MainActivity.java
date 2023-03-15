@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.pesa.ui.login.LoginActivity;
+import com.example.pesa.ui.login.loginActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         // add the OnClickListener in sender button after clicked this button following Instruction will run
         login.setOnClickListener(v -> {
             // Create the Intent object of this class Context() to Second_activity class
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            Intent intent = new Intent(getApplicationContext(), loginActivity.class);
             // start the Intent
             startActivity(intent);
         });

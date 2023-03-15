@@ -3,4 +3,10 @@
     <item name="passwordEditText" type="id" />
     <item name="usernameEditText" type="id" />
     <item name="loginButton" type="id" />
+    <item name="edit_text_name" type="id"><![CDATA[<TextView]]></item>
+    <item name="edit_text_email" type="id"><![CDATA[<TextView]]></item>
+    <item name="edit_text_password" type="id"><![CDATA[<TextView]]></item>
+    <item name="edit_text_confirm_password" type="id"><![CDATA[<TextView]]></item>
+    <item name="button_register" type="id"><![CDATA[<Button]]></item>
+    <item name="email" type="id">TextView</item>
 </resources>
