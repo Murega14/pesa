@@ -4,13 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import ui.login.LoginActivity;
+import com.example.pesa.ui.login.LoginActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 FirebaseUser user = mAuth.getCurrentUser();
                 if (user == null) {
-                    Intent intent = new Intent(SplashScreen.this, ui.login.loginActivity.class);
+                    Intent intent = new Intent(SplashScreen.this, com.example.pesa.ui.login.LoginActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
