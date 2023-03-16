@@ -9,9 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import com.example.pesa.ui.login.LoginActivity;
-
-public class SplashScreen extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     FirebaseUser currentUser;
     private FirebaseAuth mAuth;
@@ -21,24 +19,22 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth != null) {
-            currentUser = mAuth.getCurrentUser();
-        }
+        currentUser = mAuth.getCurrentUser();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 FirebaseUser user = mAuth.getCurrentUser();
                 if (user == null) {
-                    Intent intent = new Intent(SplashScreen.this, com.example.pesa.ui.login.LoginActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
-                    Intent mainIntent = new Intent(SplashScreen.this, DashboardActivity.class);
+                    Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
                     mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(mainIntent);
                     finish();
                 }
             }
-        }, 1000);
+        }, 5000);
     }
 }
