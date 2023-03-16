@@ -1,4 +1,4 @@
-package com.example.mamafua;
+package com.example.pesa;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
